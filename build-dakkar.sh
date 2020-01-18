@@ -46,6 +46,7 @@ ROM types:
   crdroid-oreo
   e-pie
   e-oreo
+  evolutionx-10
   havoc-pie
   komodo-pie
   lineage151
@@ -144,7 +145,15 @@ function get_rom_type() {
                 extra_make_options="WITHOUT_CHECK_API=true"
                 jack_enabled="true"
                 ;;
-            lineage151)
+            evolutionx-10)
+                mainrepo="https://github.com/Evolution-X/manifest"
+                mainbranch="ten"
+                localManifestBranch="android-10.0"
+                treble_generate="evolutionx"
+                extra_make_options="WITHOUT_CHECK_API=true"
+                jack_enabled="true"
+                ;;
+	    lineage151)
                 mainrepo="https://github.com/LineageOS/android.git"
                 mainbranch="lineage-15.1"
                 localManifestBranch="android-8.1"
