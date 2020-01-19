@@ -380,7 +380,7 @@ function init_release() {
 }
 
 function init_main_repo() {
-    repo init -u "$mainrepo" -b "$mainbranch"
+    echo "Dirty version of this script only syncs phh repos"
 }
 
 function clone_or_checkout() {
@@ -388,6 +388,12 @@ function clone_or_checkout() {
     local repo="$2"
 
     if [[ "$repo" == treble_patches ]];then
+	{
+	   git clone https://github.com/Lunarixus/"$repo" "$dir" -b android-10.0
+	}
+    fi
+
+    if [[ "$repo" == device_phh_treble ]];then
 	{
 	   git clone https://github.com/Lunarixus/"$repo" "$dir" -b android-10.0
 	}
@@ -428,7 +434,7 @@ function init_patches() {
 }
 
 function sync_repo() {
-    repo sync -c -j "$jobs" -f --force-sync --no-tag --no-clone-bundle --optimized-fetch --prune
+    echo "Dirty version of this script only syncs phh repos"
 }
 
 function patch_things() {
